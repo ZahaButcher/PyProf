@@ -74,21 +74,8 @@ document.addEventListener('DOMContentLoaded', () => {
     let second_btn = document.getElementById('second_btn');
     let text = document.getElementById('text');
     let scala = document.getElementById('scala');
-    let info = document.getElementById("info");
-    let infoBtn = document.getElementById("infoBtn");
-    let opis1 = document.getElementById("opis1");
-    let opis2 = document.getElementById("opis2");
-
-    infoBtn.addEventListener('click', () => {
-        info.classList.toggle("show");
-    });
-
     first_btn.value = questions[count][0][0];
     second_btn.value = questions[count][1][0];
-
-    opis1.innerHTML = `<b>${questions[count][0][0]}:</b> ${questions[count][0][2]}`;
-    opis2.innerHTML = `<b>${questions[count][1][0]}:</b> ${questions[count][1][2]}`;
-
     start_btn.style.display = "block";
     first_btn.addEventListener('click', btn_ligic);
     second_btn.addEventListener('click', btn_ligic);
@@ -96,11 +83,7 @@ document.addEventListener('DOMContentLoaded', () => {
         start_btn.style.display = "none";
         first_btn.style.display = "block";
         second_btn.style.display = "block";
-        infoBtn.classList.add("show");
         count = 0;
-        opis1.innerHTML = `<b>${questions[count][0][0]}:</b> ${questions[count][0][2]}`;
-        opis2.innerHTML = `<b>${questions[count][1][0]}:</b> ${questions[count][1][2]}`;
-
         scala.style.width = "0%";
         for (let key in types) {
             scores[key] = 0;
@@ -129,10 +112,6 @@ document.addEventListener('DOMContentLoaded', () => {
             count++;
             first_btn.value = questions[count][0][0];
             second_btn.value = questions[count][1][0];
-
-            opis1.innerHTML = `<b>${questions[count][0][0]}:</b> ${questions[count][0][2]}`;
-            opis2.innerHTML = `<b>${questions[count][1][0]}:</b> ${questions[count][1][2]}`;
-
         }
         else {
             let result = null;
@@ -153,7 +132,6 @@ document.addEventListener('DOMContentLoaded', () => {
             console.log("result: " + result);
             text.textContent = type;
             start_btn.value = 'Пройти ещё раз!';
-            infoBtn.classList.remove("show");
 
             start_btn.style.display = "block";
             first_btn.style.display = "none";
