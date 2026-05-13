@@ -8,17 +8,31 @@
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <title>PyProf</title>
 
-    
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript">
+        (function (m, e, t, r, i, k, a) {
+            m[i] = m[i] || function () { (m[i].a = m[i].a || []).push(arguments) };
+            m[i].l = 1 * new Date();
+            for (var j = 0; j < document.scripts.length; j++) { if (document.scripts[j].src === r) { return; } }
+            k = e.createElement(t), a = e.getElementsByTagName(t)[0], k.async = 1, k.src = r, a.parentNode.insertBefore(k, a)
+        })(window, document, 'script', 'https://mc.yandex.ru/metrika/tag.js?id=109192890', 'ym');
+
+        ym(109192890, 'init', { ssr: true, webvisor: true, clickmap: true, ecommerce: "dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce: true, trackLinks: true });
+    </script>
+    <noscript>
+        <div><img src="https://mc.yandex.ru/watch/109192890" style="position:absolute; left:-9999px;" alt="" /></div>
+    </noscript>
+    <!-- /Yandex.Metrika counter -->
 </head>
 
 <body>
     <div id="scala"></div>
     <main>
-        <div id = "info">
-            <p id= "opis1">
+        <div id="info">
+            <p id="opis1">
                 описание - 1
             </p>
-            <p id = "opis2">
+            <p id="opis2">
                 описание - 2
             </p>
         </div>
@@ -27,14 +41,14 @@
             <span style="font-size: 24px;">
                 Наш тест поможет вам определиться
                 с предметами для сдачи ОГЭ/ЕГЭ
-            </span> 
+            </span>
         </h1>
         <div class="btn_group">
             <input type="button" value="Программист" class="buttons" id="first_btn">
             <input type="button" value="Врач" class="buttons" id="second_btn">
             <input type="button" value="Начать тест" class="buttons" id="start_btn">
         </div>
-        <input type="button" value="Подсказка" id = "infoBtn">
+        <input type="button" value="Подсказка" id="infoBtn">
     </main>
     <p class="author"><a href="https://vk.com/id600479127" target="_blank">Автор</a></p>
     <script src="script.js">
